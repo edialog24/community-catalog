@@ -10,7 +10,7 @@ services:
     - --replSet
     - "${replset_name}"
     - --bind_ip
-    - container_name
+    - "${container_name}"
     image: mongo:4.1.11
     labels:
       io.rancher.scheduler.affinity:host_label: ${host_label}
