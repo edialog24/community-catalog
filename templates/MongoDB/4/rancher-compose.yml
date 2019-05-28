@@ -45,7 +45,7 @@ catalog:
     - variable: root_password
       description: "The default password"
       label: "Root password"
-      type: "string"
+      type: "password"
       required: false
       default: ""
     - variable: mongo_scale
