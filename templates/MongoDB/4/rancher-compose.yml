@@ -36,6 +36,16 @@ catalog:
         - rancher-nfs
         - rancher-efs
         - rancher-ebs
+    - variable: root_username 
+      description: "The default username"
+      label: "Root username"
+      required: false
+      default: ""
+    - variable: root_password
+      description: "The default password"
+      label: "Root password"
+      required: false
+      default: ""
     - variable: mongo_scale
       description: "How many containers the MongoDB will scale to?"
       label: "mongo scale"
