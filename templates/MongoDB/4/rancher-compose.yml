@@ -39,11 +39,13 @@ catalog:
     - variable: root_username 
       description: "The default username"
       label: "Root username"
+      type: "string"
       required: false
       default: ""
     - variable: root_password
       description: "The default password"
       label: "Root password"
+      type: "string"
       required: false
       default: ""
     - variable: mongo_scale
