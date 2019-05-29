@@ -5,6 +5,8 @@ services:
     environment:
       - MONGO_SERVICE_NAME=mongo-cluster
       - CATTLE_SCRIPT_DEBUG=${debug}
+      - MONGO_INITDB_ROOT_USERNAME=${root_username}
+      - MONGO_INITDB_ROOT_PASSWORD=${root_password}
     entrypoint: /opt/rancher/bin/entrypoint.sh
     command:
     - --replSet
@@ -27,7 +29,7 @@ services:
       io.rancher.scheduler.affinity:host_label: ${host_label}
       io.rancher.container.hostname_override: container_name
       io.rancher.container.start_once: true
-    image: rancher/mongodb-conf:v0.1.1
+    image: mrcox/main:mongo-base-01 
     stdin_open: true
     entrypoint: /bin/true
   mongo-datavolume:
