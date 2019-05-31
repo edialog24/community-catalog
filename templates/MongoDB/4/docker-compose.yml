@@ -13,8 +13,8 @@ services:
     - "${replset_name}"
     - --bind_ip
     - "0.0.0.0"
-   # - --keyFile
-   # - "/opt/rancher/bin/key.cert"
+    - --keyFile
+    - "/opt/rancher/bin/key.cert"
     volumes:
        - ${mvolume}:/data/db
     image: mongo:4.0.9
@@ -33,7 +33,7 @@ services:
       io.rancher.scheduler.affinity:host_label: ${host_label}
       io.rancher.container.hostname_override: container_name
       io.rancher.container.start_once: true
-    image: mrcox/mongo-base:1.0.19 
+    image: mrcox/mongo-base:1.0.20 
     stdin_open: true
     entrypoint: /bin/true
   mongo-datavolume:
