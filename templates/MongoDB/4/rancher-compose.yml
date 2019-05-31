@@ -48,6 +48,12 @@ catalog:
       type: "password"
       required: false
       default: ""
+    - variable: mvolume 
+      description: "volume mapping"
+      label: "Volume mapping"
+      type: "string"
+      required: false
+      default: ""
     - variable: mongo_scale
       description: "How many containers the MongoDB will scale to?"
       label: "mongo scale"
